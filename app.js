@@ -18,11 +18,11 @@ app.set('view engine', 'ejs');
 // Set the correct path for the views dir
 app.set('views', path.join(__dirname, 'views'));
 
-// Set up routes
+// Set up the needed routes
 const indexRoutes = require('./src/routes/index');
 app.use('/', indexRoutes);
 
-// Start the server locally
+// Start the server on port 3009 which is locally
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
