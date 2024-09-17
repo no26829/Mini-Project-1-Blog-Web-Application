@@ -22,7 +22,7 @@ app.set('views', path.join(__dirname, 'views'));
 const indexRoutes = require('./src/routes/index');
 app.use('/', indexRoutes);
 
-// Start the server on port 3009 which is locally
+// Start the server on port 3000 which is locally
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
