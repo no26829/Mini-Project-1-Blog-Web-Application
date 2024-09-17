@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/main.css">
+  <title>New Post</title>
+</head>
+<body>
+  <!-- New post title -->
+  <h1>New Post</h1>
+  <form method="post" action="/new">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required>
+
+
+    <!-- New post content -->
+    <label for="content">Content:</label>
+    <input type="content" name="content" required>
+
+    <!-- New post author name -->
+    <label for="authorName">Author name:</label>
+    <input type="authorName" name="authorName" required>
+
+    <!-- New post submit button -->
+    <button type="submit">Add Post</button>
+
+  </form>
+</body>
+</html>

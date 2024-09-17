@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- links the stylesheet to index.ejs -->
+  <link rel="stylesheet" href="/styles/main.css">
+
+  
+<!-- page title -->
+  <title>Naima's Mini-Blog Project</title>
+</head>
+<body>
+  <h1>Naima's Mini-Blog Project</h1>
+  <ul>
+    <% blogPosts.forEach(post => { %>
+      <li>
+        
+        <!-- post title -->
+        <h2><%= post.title %></h2>
+
+        <div class="post-container">
+        <!-- post content -->
+        <p><%= post.content %></p>
+
+        <!-- post author name -->
+        <small>Posted by: <%= post.authorName %></small> <br>
+
+        <!-- post creation for author -->
+        <small>Posted on: <%= post.blogDate %></small> <br><br>
+        </div>
+        
+        <!-- post edit option for user -->
+        <br> <a href="/edit/<%= post.id %>" class="edit-css">Edit</a><br><br>
+
+
+        <!-- post delete option for user -->
+        <form method="post" action="/delete/<%= post.id %>">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+
+  <!-- New post option for user (using a button)-->
+  <a href="/new" class="button" role="button">New Post</a>
+
+</body>
+</html>
